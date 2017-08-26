@@ -1,0 +1,17 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "The Lounge wrapped in Electron (experimental)",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "eslint ."
+  },
+  "repository": "https://github.com/thelounge/electron-lounge",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "1.6.2",
+    "eslint": "4.5.0",
+    "thelounge": "2.4.0"
+  }
+}
