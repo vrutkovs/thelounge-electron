@@ -8,19 +8,17 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 function createWindow() {
-	// Defined in lounge's ./index.js
-	global.log = require("./node_modules/thelounge/src/log");
+	process.env.LOUNGE_HOME = path.join(__dirname, "appdata");
 
-	// Set by command-line/index.js which we do not load
+	// lol
+	process.argv.push("start");
+	process.argv.push("--private");
+
+	require("thelounge");
+
 	const helper = require("./node_modules/thelounge/src/helper");
-	helper.setHome(path.join(__dirname, "appdata"));
-
-	// Load the actual lounge server
-	const server = require("./node_modules/thelounge/src/server");
-
-	// Set working directory otherwise it can't find build.js and exits
-	process.chdir(path.join(__dirname, "node_modules", "thelounge"));
-	server();
+	const manager = require("./node_modules/thelounge/src/clientManager");
+	manager.prototype.addUser("user", helper.password.hash("password"), true);
 
 	mainWindow = new BrowserWindow({
 		width: 800,
