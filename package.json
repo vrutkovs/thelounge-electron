@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "thelounge-electron",
   "version": "1.0.0",
   "description": "The Lounge wrapped in Electron (experimental)",
   "main": "index.js",
