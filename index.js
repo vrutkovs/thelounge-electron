@@ -25,7 +25,7 @@ function createWindow() {
 		height: 600
 	});
 
-    mainWindow.setMenu(null);
+	mainWindow.setMenu(null);
 
 	mainWindow.loadURL("http://127.0.0.1:9000/");
 
@@ -33,15 +33,15 @@ function createWindow() {
 		mainWindow = null;
 	});
 
-    let handleRedirect = (e, url) => {
-        if(url != mainWindow.webContents.getURL()) {
-            e.preventDefault()
-            electron.shell.openExternal(url)
-        }
-    }
+	let handleRedirect = (e, url) => {
+		if(url != mainWindow.webContents.getURL()) {
+			e.preventDefault()
+			electron.shell.openExternal(url)
+		}
+	}
 
-    mainWindow.webContents.on('will-navigate', handleRedirect)
-    mainWindow.webContents.on('new-window', handleRedirect)
+	mainWindow.webContents.on('will-navigate', handleRedirect)
+	mainWindow.webContents.on('new-window', handleRedirect)
 }
 
 app.on("ready", createWindow);
