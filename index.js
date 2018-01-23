@@ -25,6 +25,8 @@ function createWindow() {
 		height: 600
 	});
 
+    mainWindow.setMenu(null);
+
 	mainWindow.loadURL("http://127.0.0.1:9000/");
 
 	mainWindow.on("closed", () => {
