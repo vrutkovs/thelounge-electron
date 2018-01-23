@@ -33,15 +33,15 @@ function createWindow() {
 		mainWindow = null;
 	});
 
-	let handleRedirect = (e, url) => {
-		if(url != mainWindow.webContents.getURL()) {
-			e.preventDefault()
-			electron.shell.openExternal(url)
+	const handleRedirect = (e, url) => {
+		if (url !== mainWindow.webContents.getURL()) {
+			e.preventDefault();
+			electron.shell.openExternal(url);
 		}
-	}
+	};
 
-	mainWindow.webContents.on('will-navigate', handleRedirect)
-	mainWindow.webContents.on('new-window', handleRedirect)
+	mainWindow.webContents.on("will-navigate", handleRedirect);
+	mainWindow.webContents.on("new-window", handleRedirect);
 }
 
 app.on("ready", createWindow);
