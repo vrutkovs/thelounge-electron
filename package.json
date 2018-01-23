@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "thelounge-electron",
   "version": "1.0.0",
   "description": "The Lounge wrapped in Electron (experimental)",
   "main": "index.js",
@@ -12,6 +12,6 @@
   "devDependencies": {
     "electron": "1.7.11",
     "eslint": "4.5.0",
-    "thelounge": "2.4.0"
+    "thelounge": "2.6.0"
   }
 }
