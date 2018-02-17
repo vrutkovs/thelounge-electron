@@ -8,7 +8,7 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 function createWindow() {
-	process.env.LOUNGE_HOME = path.join(__dirname, "appdata");
+	//process.env.LOUNGE_HOME = path.join(__dirname, "appdata");
 
 	// lol
 	process.argv.push("start");
