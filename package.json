@@ -10,7 +10,7 @@
   "repository": "https://github.com/thelounge/electron-lounge",
   "license": "MIT",
   "devDependencies": {
-    "electron": "2.0.0-beta.1",
+    "electron": "2.0.0-beta.2",
     "eslint": "4.16.0",
     "thelounge": "2.7.1"
   }
